@@ -48,7 +48,7 @@ class UserDetailsFragment : Fragment() {
         emailTV = userDetailsView.findViewById(R.id.email_val)
         idTV = userDetailsView.findViewById(R.id.person_id_val)
 
-        initUI(user)
+//        initUI(user)
 
         return userDetailsView
     }
@@ -56,9 +56,10 @@ class UserDetailsFragment : Fragment() {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
         viewModel = ViewModelProvider(this).get(UserDetailsViewModel::class.java)
-        viewModel.getText()!!.observe(viewLifecycleOwner, Observer {
-
+        viewModel.userObj.observe(viewLifecycleOwner, Observer {
+            initUI(it)
         })
+       viewModel.setUserId(user.id)
 
         val toolbar : Toolbar = activity!!.findViewById(R.id.toolbar)
         toolbar.setTitle(R.string.user_details_title)
