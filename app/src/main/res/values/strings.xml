@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">KotlinExample</string>
+    <string name="refresh">Refresh</string>
+    <string name="id">Id</string>
+    <string name="firstName">FirstName</string>
+    <string name="lastName">Last Name</string>
+    <string name="email">Email Id</string>
+    <string name="user_details_title">User Details</string>
+    <string name="user_list_title">User List</string>
+</resources>
